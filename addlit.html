@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Einleitung</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="addlit.html" class="active"><strong aria-hidden="true">2.</strong> Literatur hinzufügen</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="item_types.html"><strong aria-hidden="true">2.1.</strong> Item types</a></li></ol></li><li class="chapter-item expanded "><a href="gruppen.html"><strong aria-hidden="true">3.</strong> Gruppen</a></li><li class="chapter-item expanded affix "><a href="impressum.html">Impressum</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Einleitung</a></li><li class="chapter-item expanded affix "><li class="part-title">Einrichtung</li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="account.html"><strong aria-hidden="true">2.</strong> Zotero-Konto</a></li><li class="chapter-item expanded affix "><li class="part-title">Basisfunktionen</li><li class="chapter-item expanded "><a href="addlit.html" class="active"><strong aria-hidden="true">3.</strong> Literatur hinzufügen</a></li><li class="chapter-item expanded "><a href="item_types.html"><strong aria-hidden="true">4.</strong> Item types</a></li><li class="chapter-item expanded "><a href="infostruct.html"><strong aria-hidden="true">5.</strong> Informationen strukturieren</a></li><li class="chapter-item expanded "><a href="finden.html"><strong aria-hidden="true">6.</strong> Informationen (wieder)finden</a></li><li class="chapter-item expanded affix "><li class="part-title">Texte schreiben</li><li class="chapter-item expanded "><a href="zitieren.html"><strong aria-hidden="true">7.</strong> Zitieren</a></li><li class="chapter-item expanded "><a href="litverz.html"><strong aria-hidden="true">8.</strong> Literaturverzeichnis erstellen</a></li><li class="chapter-item expanded affix "><li class="part-title">Fortgeschrittenere Anwendungen</li><li class="chapter-item expanded "><a href="backup.html"><strong aria-hidden="true">9.</strong> Backup</a></li><li class="chapter-item expanded "><a href="gruppen.html"><strong aria-hidden="true">10.</strong> Gruppen</a></li><li class="chapter-item expanded "><a href="pdfviewer.html"><strong aria-hidden="true">11.</strong> PDF-Viewer</a></li><li class="chapter-item expanded "><a href="citstyles.html"><strong aria-hidden="true">12.</strong> Zitationsstile</a></li><li class="chapter-item expanded "><a href="addons.html"><strong aria-hidden="true">13.</strong> Add-ons</a></li><li class="chapter-item expanded "><a href="api.html"><strong aria-hidden="true">14.</strong> API</a></li><li class="chapter-item expanded affix "><a href="impressum.html">Impressum</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -180,13 +180,36 @@ In einer Vielzahl von Bibliothekskatalogen, auf Verlagsplattformen,Literaturdate
 <p>Zotero versucht die entsprechenden bibliographischen Informationen aus verschiedenen Datenbanken zu importieren.</p>
 <h2><a class="header" href="#manuelle-eingabe-von-titeln" id="manuelle-eingabe-von-titeln">Manuelle Eingabe von Titeln</a></h2>
 <p>Falls kein (halb-)automatischer Import möglich ist oder Sie aus anderen Gründen nicht auf Fremddaten zurückgreifen möchten, können Sie Titel auch manuell eingeben.</p>
+<h2><a class="header" href="#import-aus-datei-oder-zwischenablageclipboard" id="import-aus-datei-oder-zwischenablageclipboard">Import aus Datei oder Zwischenablage/Clipboard</a></h2>
+<p>Zotero kann auch bibliographische Informationen in verschiedenen Formaten entweder aus einer Datei oder aus der Zwischenablage einfügen.</p>
+<p>Ein in der wissenschaft häufig verwendetes Format ist etwa BibTeX. Ein BibTeX-Einträg für ein Kapitel in einem Sammelband sieht z.B. so aus<sup class="footnote-reference"><a href="#bibtex_example">1</a></sup>:</p>
+<pre><code>@incollection{TeichGeertinger_2021,
+ abstract = {There are profound differences between the notation of text and music in terms of their purpose, use of symbols and how they translate into a machine-readable form. This paper identifies the difficulties of encoding music notation as compared to text and how these difficulties may be handled. Despite the challenges, encoding formats for notated music which are as sophisticated as comparable textual formats are now available, such as the XML schema defined by the Music Encoding Initiative (MEI). But are there any limits to what is possible to encode? The author argues that today the primary limiting factor is not the available encoding systems but rather the ambiguity and complexity of music notation itself.},
+ author = {{Teich Geertinger}, Axel},
+ title = {{Digital Encoding of Music Notation with MEI}},
+ editor = {Bue, Margrethe Støkken and Rockenberger, Annika},
+ booktitle = {{Notated Music in the Digital Sphere. Possibilities and Limitations}},
+ address = {Oslo},
+ publisher = {National Library of Norway},
+ year = {2021},
+ pages = {35–56},
+ series = {Nota bene -- Studies from the National Library of Norway},
+ volume = {15},
+ url = {https://issuu.com/nasjonalbiblioteket/docs/nota_bene_15_layout_issuu/35},
+}
+</code></pre>
+<p>Eher im bibliothekarischen Kontext gebräuchlich sind <a href="https://de.wikipedia.org/wiki/RIS_(Dateiformat)">RIS-Dateien</a>.</p>
+<p>Bibliographische Informationen im BibTeX- oder RIS-Format können entweder in einer Datei gespeichert und dann über <code>File/Datei &gt; Import/Importieren</code> importiert werden oder aber in die Zwischenablage kopiert und über <code>File/Datei &gt; Import from Clipboard/Aus Zwischenablage importieren</code> importiert werden.</p>
+<div class="footnote-definition" id="bibtex_example"><sup class="footnote-definition-label">1</sup>
+<p>Quelle: <a href="https://music-encoding.org/resources/bibliography.html">https://music-encoding.org/resources/bibliography.html</a></p>
+</div>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="installation.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="account.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
@@ -204,7 +227,7 @@ In einer Vielzahl von Bibliothekskatalogen, auf Verlagsplattformen,Literaturdate
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="installation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="account.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
